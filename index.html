@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link rel="stylesheet" href="/css/popup.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="popup">
+            <div class="popup-container">
+                <header class="feedback-header">
+                    <h2 class="title">Ваш Фидбек</h2>
+                </header>
+                <div class="feedback-content">
+                    <form class="feedback-form">
+                        <div class="feedback-row">
+                            <span class="feedback-item" name="visit">Как часто вы заходите на сайт?
+                                <select class="feedback-visit">
+                                    <option>Почти каждый день</option>
+                                    <option>Раз в несколько дней</option>
+                                    <option>Раз в несколько недель</option>
+                                    <option>Несколько раз в год</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="feedback-row">
+                            <div class="feedback-item">Вы пдписаны на e-mail рассылку?
+                                <div class="feedback-options">
+                                    <div class="radio-group">
+                                        <input id="yes" name="answer" class="feedback-radio" type="radio" checked>
+                                        <label for="yes" class="feedback-radio-text">Да</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input id="no" name="answer" class="feedback-radio" type="radio">
+                                        <label for="no" class="feedback-radio-text">Нет</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-row">
+                            <label for="content" class="feedback-label">Расскажите какой контент вы хотели бы видеть на
+                                нашем
+                                сайте?
+                                <textarea id="content" class="feedback-text" name="content" type="text"
+                                    placeholder="Может больше рецептов?"></textarea>
+                            </label>
+                        </div>
+                        <div class="feedback-row">
+                            <button class="feedback-button" alt="кнопка отправить">отправить</button>
+                        </div>
+                    </form>
+                </div>
+                <span class="hidden">кнопка закрыть</span>
+                <button class="popup-close" alt="кнопка закрыть" type="button"></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

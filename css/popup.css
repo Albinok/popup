@@ -1,0 +1,177 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+  font-style: bold;
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: OpenSans, serif;
+  font-size: 13px;
+}
+
+.background {
+  padding-top: 72px;
+  padding-bottom: 70px;
+  background-image: url(../images/banner-mobile.jpg);
+  background-position: center center;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.6;
+  z-index: -1;
+}
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-container {
+  background: #ffffff;
+  padding: 30px 15px;
+  position: relative;
+}
+.title {
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  color: #0f0d0e;
+  font-weight: 700;
+}
+.title::after {
+  content: "";
+  width: 66px;
+  height: 3px;
+  background: #b59f5b;
+  display: block;
+  margin: auto;
+  margin-top: 11px;
+  margin-bottom: 19px;
+  opacity: 0.4;
+}
+.feedback-visit,
+.feedback-text {
+  display: block;
+  border: none;
+  background: #f4f7f6;
+  margin-top: 9px;
+  width: 100%;
+  padding: 20px;
+}
+.feedback-visit:focus,
+.feedback-text:focus {
+  outline: 1px solid #b59f5b;
+}
+.feedback-visit {
+  appearance: none;
+  overflow: hidden;
+  background-image: url("../svg/form-arrows.svg");
+  background-size: 13px;
+  background-repeat: no-repeat;
+  color: rgba(0, 0, 0, 0.5);
+  background-position: right center;
+}
+.feedback-text {
+  height: 132px;
+  font-family: OpenSans;
+  max-width: 100%;
+}
+
+.feedback-item {
+  padding-top: 33px;
+  padding-bottom: 9px;
+}
+
+.feedback-radio-text::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../svg/form-empty-circle.svg);
+  background-position: center center;
+  background-size: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.feedback-radio:checked ~ .feedback-radio-text::before {
+  background-image: url(../svg/form-circle.svg);
+}
+.radio-group {
+  margin-right: 30px;
+  margin-top: 15px;
+}
+.feedback-options {
+  display: flex;
+}
+.feedback-radio {
+  display: none;
+}
+.feedback-button {
+  width: 100%;
+  height: 49px;
+  background: #b59f5b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 26px;
+}
+.feedback-button:hover {
+  background-color: #323232;
+}
+.popup-close {
+  position: absolute;
+  border: none;
+  right: 15px;
+  cursor: pointer;
+  top: -30px;
+  background-color: transparent;
+  width: 26px;
+  height: 26px;
+  background-image: url(../svg/form-x.svg);
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* MEDIA */
+@media (min-width: 641px) {
+  .popup-container {
+    padding: 55px 30px;
+    max-width: 392px;
+  }
+  .background {
+    background-image: url(../images/banner-bg.jpg);
+  }
+}
